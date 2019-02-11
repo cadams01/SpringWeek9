@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> 
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Contact Us</title>
+
+<style>
+h1 {
+         height: 300px;
+         background-color: green);
+         text-align: center;
+   }
+   p {
+        
+        text-align: center;
+    }
+</style>
+  
+</head>
+
+<body>
+
+
+
+<h1>Give us a call!</h1>
+<p>800-Buy-Shoes</p>
+
+<p>Please use the form below to contact us</p>
+ <form action='#' th:action="@{/contact}" th:object="${customer}" method="post">
+ <table>
+	<tr>
+	<td>Name: </td>
+	
+	<td><input type="text" th:field="*{name}" /></td>
+	</tr>
+	
+
+	<tr>
+	<td>Message: </td>
+	<td><input type="password" th:field="*{message}" /></td>
+	</tr>
+	<tr>
+	<td><button type="submit">Shoot!</button> </td>
+	</tr>
+
+	</table> 
+	
+	</form> 
+
+
+
+
+
+</body>
+
+</html>
